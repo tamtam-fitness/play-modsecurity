@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+    modsec:
+       image: fufuhu/docker-nginx-modsecurity
+       container_name: modsec
+       volumes:
+         - ./conf.d/nginx.conf:/etc/nginx/nginx.conf
+         - ./conf.d/main.conf:/etc/nginx/modsecurity/main.conf
+         - ./conf.d/default.conf:/etc/nginx/conf.d/default.conf
+         - ./conf.d/ruleset.conf:/etc/nginx/modsecurity/ruleset.conf
+
+       ports:
+          - "80:80"
+      
