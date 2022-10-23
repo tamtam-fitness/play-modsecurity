@@ -1,6 +1,6 @@
 # play-modsecurity
 
-Type below command so that you can run container.
+Type the below command so that you can run container.
 
 `docker-compose up -d`
 
