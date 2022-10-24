@@ -17,3 +17,5 @@ You can check whether the container which you run is working or not.
 
 - [OWASP ModSecurity Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/)
 
+- [オープンソースWAF「ModSecurity」で学ぶサーバーの防御](https://persol-tech-s.co.jp/corporate/security/article.html?id=2)
+
