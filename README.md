@@ -1,5 +1,6 @@
 # play-modsecurity
 
+
 ## What is this?
 It is for learning web security through modsecurity, which is a WAF tools.
 
@@ -11,7 +12,6 @@ Therefore, you can try to protect against vulnerabilities by setting modsecurity
 
 ### Run Containers
 Type below command so that you can run container.(It takes 10 min .)
-`docker-compose up -d`
 
 ### Restart Nginx Server
 After running containers, you need to restart nginx server(including modsecurity) so that it
@@ -50,3 +50,5 @@ then, you will restart nginx server as I explained previously.
 - [OWASP ModSecurity Core Rule Set](https://owasp.org/www-project-modsecurity-core-rule-set/)
 
 - [PRJ702: Protection of Web applications running on Docker against SQL injection attacks](https://antonblogwordpress.wordpress.com/2018/08/14/prj702-protection-of-web-applications-running-on-docker-against-sql-injection-attacks/)
+
+- [オープンソースWAF「ModSecurity」で学ぶサーバーの防御](https://persol-tech-s.co.jp/corporate/security/article.html?id=2)
