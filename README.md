@@ -14,11 +14,9 @@ Therefore, you can try to protect against vulnerabilities by setting modsecurity
 Type below command so that you can run container.
 
 ### Restart Nginx Server
-After running containers, you need to restart nginx server(including modsecurity) so that it
+After running containers, you need to restart nginx server(including modsecurity) so that it can integrate with WebGoat.
 
-can integrate with WebGoat.
-
-To enter and restart nginx server including modsecurity, you type some commands.
+To enter and restart the nginx server, you type some commands.
 
 Commands are as follows.
 
@@ -34,7 +32,7 @@ Then you can access the Webgoat via below URL. (please wait 30sec after typing a
 
 If you want to change modsecurity rule, you needs to update `./conf.d/ruleset.con` .
 
-then, you will restart nginx server as I explained previously.
+Then, you will restart nginx server as I explained previously.
 
 ### Rreference
 - [ModSecurity](https://github.com/SpiderLabs/ModSecurity)
