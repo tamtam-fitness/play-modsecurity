@@ -9,7 +9,18 @@ services:
          - ./conf.d/main.conf:/etc/nginx/modsecurity/main.conf
          - ./conf.d/default.conf:/etc/nginx/conf.d/default.conf
          - ./conf.d/ruleset.conf:/etc/nginx/modsecurity/ruleset.conf
-
        ports:
           - "80:80"
-      
+       networks:
+          - proxynet
+       restart: always
+    webgoat:
+        image: webgoat/webgoat-8.0
+        container_name: webgoat
+        ports:
+          - "8080:8080"
+        networks:
+          - proxynet
+
+networks:
+  proxynet:
