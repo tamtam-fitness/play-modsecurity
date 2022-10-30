@@ -11,7 +11,7 @@ Therefore, you can try to protect against vulnerabilities by setting modsecurity
 ## How To Set Up
 
 ### Run Containers
-Type below command so that you can run container.(It takes 10 min .)
+Type below command so that you can run container.
 
 ### Restart Nginx Server
 After running containers, you need to restart nginx server(including modsecurity) so that it
