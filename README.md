@@ -30,7 +30,7 @@ Then you can access the Webgoat via below URL. (please wait 30sec after typing a
 
 ## How To Change Rules
 
-If you want to change modsecurity rule, you needs to update `./conf.d/ruleset.con` .
+If you want to change modsecurity rule, you needs to update `./conf.d/ruleset.conf` .
 
 Then, you will restart nginx server as I explained previously.
 
