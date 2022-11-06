@@ -1,6 +1,5 @@
 # play-modsecurity
 
-
 ## What is this?
 It is for learning web security through modsecurity, which is a WAF tools.
 
@@ -12,6 +11,8 @@ Therefore, you can try to protect against vulnerabilities by setting modsecurity
 
 ### Run Containers
 Type below command so that you can run container.
+
+`docker compose up -d --build`
 
 ### Restart Nginx Server
 After running containers, you need to restart nginx server(including modsecurity) so that it can integrate with WebGoat.
@@ -34,6 +35,24 @@ If you want to change modsecurity rule, you needs to update `./conf.d/ruleset.co
 
 Then, you will restart nginx server as I explained previously.
 
+## How To Try Easy Test
+
+After entering WebGoat, you type `'or 1=1` as sql injection like the below image.
+![webgoat_login](./webgoat.png)
+
+In this ModSecurity may not recognize the attack.
+
+Then, you will remove comment out and enable the below command in `./conf.d/main.conf`
+`modsecurity on;`
+`modsecurity_rules_file /etc/nginx/modsecurity/main.conf;`
+
+![main.conf](./main_conf.png)
+
+After restarting nginx, when you retry `'or 1=1`, Modsecurity recognize and block the attack.
+
+![after_webgoat_login](./after_webgoat.png)
+
+
 ### Rreference
 - [ModSecurity](https://github.com/SpiderLabs/ModSecurity)
 
@@ -50,3 +69,9 @@ Then, you will restart nginx server as I explained previously.
 - [PRJ702: Protection of Web applications running on Docker against SQL injection attacks](https://antonblogwordpress.wordpress.com/2018/08/14/prj702-protection-of-web-applications-running-on-docker-against-sql-injection-attacks/)
 
 - [オープンソースWAF「ModSecurity」で学ぶサーバーの防御](https://persol-tech-s.co.jp/corporate/security/article.html?id=2)
+
+- [WebGoat: (Almost) Fully Documented Solution (en)](https://github.com/WebGoat/WebGoat/wiki/(Almost)-Fully-Documented-Solution-(en))
+
+- [REQUEST-942-APPLICATION-ATTACK-SQLI.conf](https://github.com/SpiderLabs/owasp-modsecurity-crs/blob/v3.3/dev/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf
+)
+
